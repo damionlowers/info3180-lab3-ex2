@@ -1,4 +1,8 @@
 from flask import Flask
 
+DEBUG = 'True'
+SECRET_KEY = 'my_secret_key'
+
 app = Flask(__name__)
+app.config.from_object(__name__)
 from app import views
